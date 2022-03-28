@@ -1,24 +1,9 @@
-# OpenMusic API Versi 2
+# Open Music API Queue Consumer
 
-# Setup Project
+# Library
+- `amqplib` : untuk berinteraksi dengan protokol AMQP dalam menerima pesan dari queue.
+- `pg` : untuk berinteraksi dengan Postgres Database.
+- `dotenv` : untuk mengelola environment variable di Node.js proyek.
+- `nodemailer` : untuk mengirimkan email melalui Node.js.
 
-- Clone project
-
-    ```
-    git clone
-    ```
-- Install library
-
-    ```
-    npm install 
-    ```
-- Migrate schema database
-
-    ```
-    npm run migrate up
-    ```
-- Running Project
-
-    ```
-    npm run start-dev
-    ```
+- Install full : `npm install amqplib pg dotenv nodemailer`
