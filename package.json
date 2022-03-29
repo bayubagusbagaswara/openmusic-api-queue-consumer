@@ -4,6 +4,7 @@
   "description": "OpenMusic API Queue Consumer",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./src/consumer.js",
     "lint": "eslint ./src"
   },
   "repository": {
