@@ -17,12 +17,12 @@ const init = async () => {
   const channel = await connection.createChannel();
 
   // pastikan queue dengan nama export:songs telah terbuat
-  await channel.assertQueue('export:songs', {
+  await channel.assertQueue('export:playlists', {
     durable: true,
   });
 
   // consume queue export:songs dengan menetapkan listener.listen sebagai fungsi callback-nya
-  channel.consume('export:songs', listener.listen, { noAck: true });
+  channel.consume('export:playlists', listener.listen, { noAck: true });
 };
 
 init();
