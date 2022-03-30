@@ -15,13 +15,7 @@ class Listener {
 
       const playlistContainSongs = { ...playlist, songs };
 
-      const resultAttachment = {
-        playlist: playlistContainSongs,
-      };
-
-      console.log(resultAttachment);
-
-      const result = await this._mailSender.sendEmail(targetEmail, JSON.stringify(resultAttachment));
+      const result = await this._mailSender.sendEmail(targetEmail, JSON.stringify({ playlist: playlistContainSongs }));
       console.log(result);
     } catch (error) {
       console.error(error);
